@@ -61,13 +61,22 @@ def loginwindow():
                             mainwin.destroy()
                             aboutwindow()
                         def closeclick():
-                            mainwin.destroy()
-                            
+                            con=''
+                            con=mb.askyesno(title='Confirmation', message='Are you sure you want to Exit?')
+                            if con==True:
+                                mainwin.destroy()
+                        def logoutclick():
+                            con=''
+                            con=mb.askyesno(title='Confirmation', message='Are you sure you want to Logout?')
+                            if con==True:
+                                mainwin.destroy()
+                                loginwindow()
                         btn=Button(mainwin, text="Customers", command=customerclick, font=("Bold",20)).place(x=73, y=209)
                         btn1=Button(mainwin, text="Employees", command=employeeclick, font=("Bold",20)).place(x=529, y=209)
                         btn2=Button(mainwin, text="Admin", command=adminclick, font=("Bold",20)).place(x=338,y=298)
                         btn3=Button(mainwin, text="About", command=aboutclick, font=("Bold",20)).place(x=74, y=374)
                         btn4=Button(mainwin, text="Exit ", command=closeclick, fg='red',font=("Bold",19)).place(x=568, y=374)
+                        btnhaha=Button(mainwin, text="Log Out", command=logoutclick,bg='gold2', fg='red3',font=("Verdana Bold",13)).place(x=682, y=14)
 
                     # Customer Screen
                     def customerwindow():
@@ -169,9 +178,9 @@ def loginwindow():
                         lbl16=Label(aboutwin, text='''Thrinethra . J\n
                         12-\'A\' (Biology with Computer Science)''',fg='gold', bg='darkolivegreen',font=("Gisha Bold",17)).place(x=0,y=374)
                         lbl17=Label(aboutwin, text='and', bg='darkolivegreen',font=("Consolas",31)).place(x=258,y=257)
-                        lbl18=Label(aboutwin, text='OF', bg='darkolivegreen',font=("Constantia",34)).place(x=541,y=257)
+                        lbl18=Label(aboutwin, text='OF', bg='darkolivegreen',font=("Constantia",34)).place(x=658,y=257)
                         lbl19=Label(aboutwin, text='''Amrita Vidyalayam,
-                        TRICHY''', bg='gold',font=("Gigi",26)).place(x=708,y=246)
+                        TRICHY''', bg='gold',font=("Gigi",26)).place(x=768,y=246)
                         def abbackclick():
                             aboutwin.destroy()
                             mainwindow()
@@ -803,13 +812,22 @@ def loginwindow():
                             mainwin.destroy()
                             aboutwindow()
                         def closeclick():
-                            mainwin.destroy()
-                            
+                            con=''
+                            con=mb.askyesno(title='Confirmation', message='Are you sure you want to Exit?')
+                            if con==True:
+                                mainwin.destroy()
+                        def logoutclick():
+                            con=''
+                            con=mb.askyesno(title='Confirmation', message='Are you sure you want to Logout?')
+                            if con==True:
+                                mainwin.destroy()
+                                loginwindow()
                         btn=Button(mainwin, text="Customers", command=customerclick, font=("Bold",20)).place(x=73, y=209)
                         btn1=Button(mainwin, text="Employees", command=employeeclick, font=("Bold",20)).place(x=529, y=209)
                         btn2=Button(mainwin, text="Admin", command=adminclick, font=("Bold",20)).place(x=338,y=298)
                         btn3=Button(mainwin, text="About", command=aboutclick, font=("Bold",20)).place(x=74, y=374)
                         btn4=Button(mainwin, text="Exit ", command=closeclick, fg='red',font=("Bold",19)).place(x=568, y=374)
+                        btnhaha=Button(mainwin, text="Log Out", command=logoutclick,bg='gold2', fg='red3',font=("Verdana Bold",13)).place(x=682, y=14)
 
                     # Customer Screen
                     def customerwindow():
@@ -910,10 +928,10 @@ def loginwindow():
                         12-\'C\' (Commerce with Computer Science)''',fg='gold', bg='gray17',font=("Gisha Bold",17)).place(x=0,y=118)
                         lbl16=Label(aboutwin, text='''Thrinethra . J\n
                         12-\'A\' (Biology with Computer Science)''',fg='gold', bg='gray17',font=("Gisha Bold",17)).place(x=0,y=374)
-                        lbl17=Label(aboutwin, text='and', bg='darkolivegreen',font=("Consolas",31)).place(x=259,y=257)
-                        lbl18=Label(aboutwin, text='OF', bg='darkolivegreen',font=("Constantia",34)).place(x=541,y=257)
+                        lbl17=Label(aboutwin, text='and', bg='gray17',fg='gold',font=("Consolas",31)).place(x=259,y=257)
+                        lbl18=Label(aboutwin, text='OF', bg='gray17',fg='gold',font=("Constantia",34)).place(x=658,y=257)
                         lbl19=Label(aboutwin, text='''Amrita Vidyalayam,
-                        TRICHY''', bg='gold',font=("Gigi",26)).place(x=708,y=246)
+                        TRICHY''', bg='gold',font=("Gigi",26)).place(x=768,y=246)
                         def abbackclick():
                             aboutwin.destroy()
                             mainwindow()
@@ -1521,8 +1539,6 @@ def loginwindow():
                         btn30=Button(incomewin, text='Back', fg='red', command=asbackclick, font=('Bold',19)).grid(column=3,row=10)
 
                     mainwindow()
-                else:
-                    mb.showerror('Error', 'No theme selected.\n\nPlease select a theme and try again.')
             else:
                 mb.showerror('Error', 'The password is incorrect.\n\nPlease check and re-enter the password.')
         else:
@@ -1534,6 +1550,7 @@ def loginwindow():
     rad2=Radiobutton(loginwin, text='Dark Theme',font=('Calibri Bold',16),width=14,fg='darkgoldenrod1',bg='gray30' ,value=2,variable=selected)
     rad1.place(x=9, y=252)
     rad2.place(x=210, y=252)
+    rad1.select()
     loginwin.mainloop()
 
 
