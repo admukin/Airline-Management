@@ -1,6 +1,6 @@
 # Airline-Management
 
-This program is purely intended for....................................... having fun!! Sounds like those license aggreements right??!! 
+This program is purely intended for....................................... having fun!! Sounds like those license agreements right??!! 
 
 Just kiddin'... This program is open-source and anyone can have fun with at anytime!! 
 
